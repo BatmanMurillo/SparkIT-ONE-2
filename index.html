@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SparkIT ONE | Home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style principal.css">
+</head>
+
+<body>
+    <div id="glow-background"></div>
+
+    <div class="hero">
+        <a href="index.html">SparkIT ONE</a>
+        <a href="html/proyectos.html">Nuestro trabajo</a>
+        <a href="html/cotizaciones.html">Cotizaciones</a>
+        <a href="html/contacto.html">Contacto</a>
+        <a href="html/acerca-de.html">Acerca de</a>
+    </div>
+
+
+    <header class="header">
+        <div class="promo-banner" id = "promo-banner">
+            <a href="html/oferta.html" id="abrirCupon" class="banner-link">
+                ¡Lanzamiento de SparkIT ONE! 10% de descuento en tu primera Web App durante este mes
+            </a>
+            <button id = "boton-banner">X</button>
+        </div>
+    </header>
+
+    <header class="header-container">
+        <div class="hero-left">
+            <h1 class="main-title">SparkIT ONE</h1>
+            <p class="subtitle">Cuéntanos tus ideas para poder hacerlas realidad</p>
+
+            <nav class="nav-column">
+                <a href="#sobre-nosotros"><span></span> Sobre nosotros</a>
+                <a href="#formacion-aplicada"><span></span> Formación aplicada</a>
+                <a href="#stack-tecnologico"><span></span> Stack Tecnológico</a>
+            </nav>
+
+        </div>
+        <div class="content-right">
+            <section id="sobre-nosotros">
+                <h2>Sobre nosotros</h2>
+                <p>En SparkIT ONE, convertimos visiones empresariales en arquitecturas de software robustas. Como
+                    ingenieros en
+                    computación, nos especializamos en la digitalización de procesos para negocios y startups que buscan
+                    dar un
+                    salto cualitativo hacia la modernidad. Nuestra misión es potenciar emprendimientos mediante el
+                    desarrollo
+                    Fullstack de soluciones escalables, desde Web App's progresivas hasta sistemas de gestión
+                    inteligentes.
+                    Aplicamos rigurosas metodologías de ingeniería para asegurar que cada línea de código contribuya a
+                    la rentabilidad
+                    del negocio, priorizando siempre una interfaz de usuario (UI) intuitiva y una experiencia de usuario
+                    (UX) fluida,
+                    respaldadas por un backend sólido y seguro. No solo construimos presencia digital; diseñamos el
+                    motor tecnológico
+                    que impulsa el crecimiento y la eficiencia de nuestros clientes.</p>
+            </section>
+
+            <section id="formacion-aplicada">
+                <h2>Formación aplicada</h2>
+                <p>Nuestra trayectoria se ha forjado a través de la resolución de retos complejos en el ámbito académico
+                    y profesional.
+                    Durante nuestra formación como ingenieros, hemos diseñado y ejecutado proyectos que demandan una
+                    alta precisión
+                    técnica y un pensamiento arquitectónico sólido. A continuación, presentamos una selección de
+                    nuestras
+                    implementaciones más significativas, las cuales sirven como base técnica de lo que hoy ofrecemos
+                    en SparkIT ONE.</p>
+
+                <!-- la clase que tiene este div debería cambiarse por otra apropiada para los botones, ya que este div- 
+                     usa la clase del nav, lo cual no debería de ser así, pero lo hago para no tener que copiar el estilo- 
+                     entero en el css. -->
+                <div class="nav-column">
+                    <a href="html/proyectos.html"><span></span> Nuestros proyectos</a>
+                </div>
+
+            </section>
+
+            <section id="stack-tecnologico">
+                <h2>Stack Tecnológico</h2>
+                <p>La excelencia en el software comienza con la selección estratégica de herramientas. En SparkIT
+                    ONE, fundamentamos
+                    nuestras soluciones en un diverso ecosistema tecnológico, diseñado para ofrecer un
+                    equilibrio perfecto entre
+                    rendimiento y escalabilidad.
+                    Como desarrolladores, completamos nuestras habilidades para dominar el ciclo de vida completo de una
+                    aplicación:
+                    desde la construcción de interfaces dinámicas y adaptativas en el Frontend, hasta la arquitectura de
+                    bases de datos
+                    y lógica de servidor robusta en el Backend. Nuestro flujo de trabajo busca integrar metodologías
+                    ágiles, garantizando
+                    que cada producto digital sea una herramienta de alta precisión lista para enfrentar los retos del
+                    mercado actual, y
+                    de esta forma, puede adaptarse a la industria competitiva a la que se enfrentan los negocios
+                    emergentes.</p>
+            </section>
+        </div>
+    </header>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="html/preguntas.html" class="footer-links">
+                <div class="footer-links">
+                    <h3>Preguntas frecuentes (Para su web)</h3>
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <footer>
+        <p>© SparkIT ONE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="javascript/glow-background.js"></script>
+    <script src = "javascript/banner.js"></script>
+
+</body>
+
+<!-- Ventana emergente (Modal) del Cupón -->
+<div id="cuponModal" class="modal-cupon" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
+  <div class="modal-contenido" style="background: #ffffff; padding: 30px; border-radius: 10px; text-align: center; max-width: 400px; width: 85%; box-shadow: 0 4px 15px rgba(0,0,0,0.3); position: relative;">
+    <span id="cerrarModal" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; color: #666;">&times;</span>
+    <h3 style="color: #333; margin-bottom: 15px;">¡Promoción Exclusiva SparkIT ONE!</h3>
+    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Utiliza este código en tu cotización y obtén un beneficio especial en tu desarrollo:</p>
+    <div style="background: #f4f4f4; padding: 12px; font-size: 18px; font-weight: bold; color: #d9534f; border: 2px dashed #ccc; border-radius: 5px; margin-bottom: 20px;">
+      SPARKIT2026
+    </div>
+    <button id="btnEntendido" style="background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 14px;">¡Entendido!</button>
+  </div>
+</div>
+
+<script src="javascript/cupon.js"></script>

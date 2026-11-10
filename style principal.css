@@ -1,0 +1,552 @@
+html {
+    scroll-behavior: smooth; /* esto se pone para que al scrollear la pagina con scrollTo de JS se haga de una forma suave y "animada"*/
+}
+
+/* Ajustes del banner */
+.promo-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: #ff2d75;
+
+    width: 100%;
+    height: 40px;
+
+    padding: 10px 0;
+    margin-top: 50px;
+
+    z-index: 2;
+
+    & button {
+        background: #000000;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        width: 2%;
+        height: 100%;
+
+        transition: 0.3s;
+    }
+
+    & button:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.banner-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.banner-link:hover {
+    text-decoration: underline;
+    filter: brightness(1.1);
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    /* Fondo negro absoluto */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* El efecto de fondo */
+#glow-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    /* Asegúrate de que este número sea menor al de tu contenido */
+    background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%),
+            rgba(29, 78, 216, 0.15),
+            transparent 80%);
+    transition: background 0.05s ease;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    /* Importante: horizontal */
+    justify-content: space-between;
+    /* Manda el título a la izquierda y el contenido a la derecha */
+    width: 100%;
+    max-width: 100%;
+    padding: 150px 5% 50px 5%;
+    box-sizing: border-box;
+
+    /* min-height: 100vh; /* agregué esto para que el header-container tenga una altura mínima de 100vh (que es la altura de la página), para así poder manejar mejor el footer y otros elementos. -Alex1ne*/
+}
+
+/* 2. LADO IZQUIERDO: Se mantiene fijo mientras bajas */
+.hero-left {
+    width: 35%;
+    /* Ocupa menos espacio para dejarle más a la derecha */
+    position: sticky;
+    top: 150px;
+    height: fit-content;
+}
+
+/* 3. LADO DERECHO: El bloque que contiene los párrafos largos */
+.content-right {
+    width: 50%;
+    /* Esto hace que los párrafos sean anchos y profesionales */
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    /* No hace falta align-items aquí porque el justify-between del padre ya lo empujó */
+}
+
+/* 4. SECCIONES: Aseguramos que el párrafo use todo su ancho disponible */
+section {
+    width: 100%;
+    text-align: left;
+}
+
+section p {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    white-space: normal;
+    /* Asegura que fluya como párrafo y no como verso */
+}
+
+section h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ff2d75;
+    display: inline-block;
+}
+
+/* 5. TÍTULOS Y BOTONES (Tu estilo original) */
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    text-align: justify;
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.nav-column a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.nav-column a span {
+    width: 30px;
+    height: 1px;
+    background-color: #444;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.nav-column a:hover {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.nav-column a:hover span {
+    width: 60px;
+    background-color: #ffffff;
+}
+
+.btn-hero {
+    margin-top: 40px;
+    background-color: #0c35ff;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer {
+    background: transparent;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.hero {
+    display: flex;
+    position: fixed;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 3;
+
+    text-align: left;
+
+    gap: 10px;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: #000000;
+    padding: 20px;
+
+    border: 1px solid #ff2d75;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+
+    & a {
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    & a:hover {
+        color: #ff2d75;
+    }
+}
+
+.header-boton-proyectos {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+
+    flex-direction: column;
+
+    min-height: 30vh;
+
+    padding: 20px;
+
+    & button {
+        position: relative;
+        padding: 20px;
+        font-size: 1rem;
+        color: white;
+        background: transparent;
+
+        border: 1px solid #ff2d75;
+
+        text-decoration: none;
+
+        transition: 0.3s;
+    }
+
+    & button span::after {
+        content: '\00bb';
+        /* este contenido es una flecha que apunta hacia la derecha*/
+        position: absolute;
+        right: 20px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    & button:hover span::after {
+        opacity: 1;
+    }
+
+    & button:hover {
+        border-color: white;
+        padding-right: 40px;
+        cursor: pointer;
+        /* usando padding-right podemos hacer que se extienda a la derecha el elemento en cuestion (en este caso el <a>), dando un efecto con el span.*/
+    }
+}
+
+.header-proyectos {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    height: 100vh;
+
+    & .fotos-proyecto {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+
+        width: 70%;
+        height: 100%;
+
+        & .wrapper-imagen {
+            position: relative;
+            height: 50%;
+            width: 40%;
+
+            border: 1px solid #ff2d75;
+
+            border-left: none;
+            border-top: none;
+            border-right: none;
+
+            transition: 0.3s;
+
+            & img {
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        & .wrapper-imagen:hover {
+            transform: scale(1.05);
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+    }
+
+    & section {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: auto;
+
+        flex-direction: row;
+    }
+
+    & .tecnologias-proyecto {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: row;
+
+        gap: 10px;
+
+        & img {
+            height: 45px;
+            width: 45px;
+
+            transition: 0.3s;
+        }
+
+        & img:hover {
+            transform: scale(1.21);
+            /* al usar numeros como .21 en vez de .20 evitamos que la transicion se vea rara*/
+        }
+    }
+}
+
+.imagen-grande {
+    left: 0;
+    top: 0;
+    inset: 0;
+    position: fixed;
+    display: none;
+    /* por defecto la imagen grande tiene el display en none, pero en realidad es flex (display: flex;)*/
+
+    flex-direction: column;
+    gap: 20px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+
+    & img {
+        height: 80%;
+        width: 65%;
+        z-index: 100;
+
+        border: 1px solid #ff2d75;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+    }
+
+    & .boton-cerrar {
+        position: relative;
+        padding: 20px;
+        font-size: 1rem;
+        color: white;
+
+        background: black;
+
+        border: 1px solid #ff2d75;
+
+        text-decoration: none;
+
+        transition: 0.3s;
+    }
+
+    & .boton-cerrar:hover {
+        cursor: pointer;
+        border-color: white;
+        padding-right: 40px;
+    }
+
+    & .boton-cerrar span::after {
+        content: '\292C';
+        position: absolute;
+        right: 20px;
+        bottom: 19px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    & .boton-cerrar:hover span::after {
+        opacity: 1;
+    }
+
+}
+
+.imagen-grande:target {
+    /* este es el truco para que la imagen grande se muestre. cuando el href dirige a la imagen-grande que tiene el id al que apunta el href, entonces se le pone display: flex.*/
+    display: flex;
+}
+
+
+.footer {
+    background-color: none;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff2d75;
+}
+
+.cotizaciones-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cotizaciones-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cotizaciones-form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cotizaciones-form .form-field.full {
+    grid-column: 1 / -1;
+}
+
+.cotizaciones-form label {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cotizaciones-form input,
+.cotizaciones-form select,
+.cotizaciones-form textarea {
+    background-color: #0b0b0b;
+    border: 1px solid #1f2937;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+}
+
+.cotizaciones-form input:focus,
+.cotizaciones-form select:focus,
+.cotizaciones-form textarea:focus {
+    border-color: #ff2d75;
+    box-shadow: 0 0 0 1px #ff2d75;
+    outline: none;
+}
+
+.cotizaciones-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.cotizaciones-form .btn-hero {
+    margin-top: 0;
+    width: fit-content;
+}
+
+@media (max-width: 900px) {
+    .cotizaciones-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

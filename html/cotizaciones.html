@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Dreams | Cotizaciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style principal.css">
+</head>
+
+<body>
+    <div id="glow-background"></div>
+
+    <div class="hero">
+        <a href="../index.html">Digital Dreams</a>
+        <a href="proyectos.html">Nuestro trabajo</a>
+        <a href="cotizaciones.html">Cotizaciones</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="acerca-de.html">Acerca de</a>
+    </div>
+
+    <header class="header">
+        <div class="promo-banner" id="promo-banner">
+            <a href="oferta.html" class="banner-link">
+                Lanzamiento de Digital Dreams! 10% de descuento en tu primera Web App durante este mes
+            </a>
+            <button id="boton-banner">X</button>
+        </div>
+    </header>
+
+    <header class="header-container">
+        <div class="hero-left">
+            <h1 class="main-title">Cotizaciones</h1>
+            <p class="subtitle">Cuantanos tu idea y te enviaremos una propuesta en 24-48 horas.</p>
+
+            <nav class="nav-column">
+                <a href="#cotizaciones"><span></span> Informacion</a>
+                <a href="#solicitud"><span></span> Solicitar cotizacion</a>
+            </nav>
+        </div>
+        <div class="content-right">
+            <section id="cotizaciones">
+                <h2>Informacion</h2>
+                <p>
+                    Completa el formulario con los detalles clave del proyecto. Mientras mas contexto recibamos,
+                    mejor podremos estimar tiempos, alcance y presupuesto inicial.
+                </p>
+            </section>
+
+            <section id="solicitud">
+                <h2>Solicitar cotizacion</h2>
+                <form class="cotizaciones-form" action="#" method="post">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="correo">Correo</label>
+                            <input id="correo" name="correo" type="email" placeholder="tu@correo.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="empresa">Empresa</label>
+                            <input id="empresa" name="empresa" type="text" placeholder="Nombre de tu negocio">
+                        </div>
+                        <div class="form-field">
+                            <label for="servicio">Tipo de servicio</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="" disabled selected>Selecciona una opcion</option>
+                                <option value="web">Web App</option>
+                                <option value="landing">Landing Page</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="sistemas">Sistema interno</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="presupuesto">Presupuesto estimado</label>
+                            <input id="presupuesto" name="presupuesto" type="text" placeholder="Rango aproximado">
+                        </div>
+                        <div class="form-field">
+                            <label for="plazo">Plazo esperado</label>
+                            <input id="plazo" name="plazo" type="text" placeholder="Ej: 4-6 semanas">
+                        </div>
+                    </div>
+                    <div class="form-field full">
+                        <label for="detalles">Detalles del proyecto</label>
+                        <textarea id="detalles" name="detalles" rows="5" placeholder="Describe objetivos, funciones clave y referencias"></textarea>
+                    </div>
+                    <button class="btn-hero" type="submit">Enviar solicitud</button>
+                </form>
+            </section>
+        </div>
+    </header>
+
+    <footer>
+        <p>Digital Dreams. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../javascript/glow-background.js"></script>
+    <script src="../javascript/banner.js"></script>
+
+</body>
+

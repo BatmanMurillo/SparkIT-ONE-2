@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SparkIT ONE | Proyectos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style principal.css">
+</head>
+
+<body>
+    <div id="glow-background"></div>
+
+    <div class="hero">
+        <a href="../index.html">SparkIT ONE</a>
+        <a href="proyectos.html">Nuestro trabajo</a>
+        <a href="cotizaciones.html">Cotizaciones</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="acerca-de.html">Acerca de</a>
+    </div>
+
+    <header>
+        <div class="promo-banner" id="promo-banner">
+            <a href="html/oferta.html" class="banner-link">
+                ¡Lanzamiento de SparkIT ONE! 10% de descuento en tu primera Web App durante este mes
+            </a>
+            <button id="boton-banner">X</button>
+        </div>
+    </header>
+
+    <header class="header-container">
+        <div class="hero-left">
+            <h1 class="main-title">Portafolio</h1>
+            <p class="subtitle">Nuestro portafolio de proyectos y certificaciones.</p>
+
+            <nav class="nav-column">
+                <a href="#proyectos"><span></span> Proyectos</a>
+                <a href="#certificaciones"><span></span> Certificaciones</a>
+            </nav>
+        </div>
+        <div class="content-right">
+            <section id="proyectos">
+                <h2>Nuestro trabajo</h2>
+                <p>En nuestras carreras como ingenieros hemos trabajado en distintos proyectos, con una variedad de
+                    habilidades técnicas y lenguajes los cuales se ven representados en nuestro trabajo, además de
+                    diversas
+                    certificaciones a través de las cuales
+                    podemos mostrar nuestro conocimiento teórico y práctico.
+                    </br></br>
+                    En base a estos podemos hacer que nuestros clientes y asociados sientan una mayor confianza cuando
+                    nos encargan realizar algún proyecto o trabajo,
+                    que es algo que siempre estamos buscando en nuestro trabajo.
+                    </br></br>
+                    A continuación mostramos nuestro portafolio, incluyendo algunos de los proyectos en los que hemos
+                    trabajo así como
+                    las tecnologías usadas, además de nuestras certificaciones.
+                </p>
+            </section>
+        </div>
+
+    </header>
+
+    <header class="header-boton-proyectos">
+        <button id = "boton-proyectos">
+            <span>
+                Ver proyectos
+            </span>
+        </button>
+    </header>
+
+    <header class="header-proyectos">
+
+        <h1>Proyectos</h1>
+
+        <section>
+
+            <!-- en esta parte de fotos del proyecto todavia tengo que hacer que cada imagen se pueda clickear para que se muestre más grande. probablemente requiera algo de JS para que funcione. -->
+            <div class="fotos-proyecto">
+
+                <!-- imagen 1 -->
+                <a href="#example1" class="wrapper-imagen">
+                    <!-- es importante que sea un <a> el que rodee a la imagen. el href apunta a la imagen que se va a abrir.-->
+                    <img src="../images/example1.png" />
+                </a>
+
+                <div class="imagen-grande" id="example1">
+                    <!-- cada imagen grande debe de tener su propio id para que se apunte a este desde la imagen pequeña o thumbnail. -->
+                    <img src="../images/example1.png" /> <!-- imagen grande -->
+                    <a href="#!" class="boton-cerrar">Cerrar<span></span></a>
+                    <!-- boton de cerrar para la imagen grande. lo unico que hay que hacer es cambiar el href a otro para poder cerrar la imagen, en este caso usamos href = "#!". -->
+                </div>
+
+                <!-- imagen 2-->
+                <a href="#example1" class="wrapper-imagen">
+                    <img src="../images/example1.png" />
+                </a>
+
+                <!-- imagen 3-->
+                <a href="#example1" class="wrapper-imagen">
+                    <img src="../images/example1.png" />
+                </a>
+
+                <!-- imagen 4-->
+                <a href="#example1" class="wrapper-imagen">
+                    <img src="../images/example1.png" />
+                </a>
+            </div>
+
+            <div class="descripcion-proyecto">
+
+                <h2>Nombre del proyecto</h2>
+
+                <p>descripción del proyecto</p>
+
+                <div class="tecnologias-proyecto">
+                    <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' />
+                    <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg' />
+                    <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' />
+                </div>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <footer>
+        <p>SparkIT ONE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../javascript/glow-background.js"></script>
+    <script src="../javascript/banner.js"></script>
+    <script src="../javascript/proyectos-scroll.js"></script>
+
+</body>
